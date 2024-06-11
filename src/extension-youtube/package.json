@@ -1,0 +1,45 @@
+{
+  "name": "directus-extension-youtube",
+  "author": "ZAGROZA Digital Agency",
+  "version": "1.0.0",
+  "type": "module",
+  "directus:extension": {
+    "host": "^10.1.9",
+    "type": "bundle",
+    "path": {
+      "app": "./../../directus-extension-youtube/app.js",
+      "api": "./../../directus-extension-youtube/api.js"
+    },
+    "entries": [
+      {
+        "type": "display",
+        "name": "youtube-display",
+        "source": "src/display/index.js"
+      },
+      {
+        "type": "interface",
+        "name": "youtube-interface",
+        "source": "src/interface/index.js"
+      }
+    ]
+  },
+  "description": "Custom interface and display for the youtube links.",
+  "icon": "extension",
+  "keywords": [
+    "directus",
+    "directus-extension",
+    "directus-custom-bundle"
+  ],
+  "scripts": {
+    "build": "directus-extension build",
+    "dev": "directus-extension build -w --no-minify",
+    "link": "directus-extension link",
+    "add": "directus-extension add"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@directus/extensions-sdk": "10.1.9"
+  }
+}
